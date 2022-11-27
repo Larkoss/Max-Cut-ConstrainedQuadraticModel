@@ -44,7 +44,7 @@ cqm = ConstrainedQuadraticModel()
 cqm.set_objective(-sum(x[i] + x[j] - 2 * x[i] * x[j] for (i,j) in g.getEdges()))
 
 num_nodes = len(g.getNodes())
-cqm.add_constraint(sum(x[i] for i in g.getNodes()) - (num_nodes / 2) == 0, label=f'subest_equal_size')
+cqm.add_constraint(sum(x[i] for i in g.getNodes()) - (num_nodes / 2) == 1, label=f'subest_equal_size')
 bqm, invert = dimod.cqm_to_bqm(cqm)
 
 from dwave.system import DWaveSampler,AutoEmbeddingComposite
