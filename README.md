@@ -48,3 +48,6 @@ objective function can be written as shown below, where the sum is over all
 edges in the graph, denoted by E.
 
 ![QUBO](QUBO.png)
+
+## Example
+![Example](example.png)
